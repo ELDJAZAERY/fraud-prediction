@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" onMouseMoved="#initialize" onTouchMoved="#initialize" prefHeight="719.0" prefWidth="1356.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <children>
+      <Label layoutX="21.0" layoutY="17.0" prefHeight="36.0" prefWidth="139.0" styleClass="logo" text="DiNaRaKoM" textAlignment="CENTER" textOverrun="CLIP">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <ScrollPane layoutX="4.0" layoutY="160.0" prefHeight="591.0" prefWidth="727.0">
+         <content>
+            <TableView fx:id="profileTab" prefHeight="589.0" prefWidth="724.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="57.0" text="ID" />
+                <TableColumn fx:id="limitBall" minWidth="100.0" prefWidth="100.0" text="LimitBalance" />
+                  <TableColumn fx:id="balance" minWidth="100.0" prefWidth="114.0" text="Balance" />
+                  <TableColumn fx:id="age" prefWidth="66.0" text="Age" />
+                  <TableColumn fx:id="gegnre" prefWidth="78.0" text="Gender" />
+                  <TableColumn fx:id="situatoin" prefWidth="99.0" text="Situation" />
+                  <TableColumn fx:id="education" prefWidth="208.0" text="Education" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label layoutX="181.0" layoutY="30.0" prefHeight="29.0" prefWidth="163.0" style="-fx-font-size: 17;" styleClass="labelInfo" text="Total predicted penalty" />
+      <Label layoutX="461.0" layoutY="31.0" prefHeight="29.0" prefWidth="206.0" style="-fx-font-size: 18;" styleClass="labelInfo" text="Minimum Expected income" />
+      <Label fx:id="penaliteVal" layoutX="346.0" layoutY="35.0" prefHeight="20.0" prefWidth="69.0" style="-fx-font-size: 18;" styleClass="labelValeur" text="7777777" />
+      <Label fx:id="minimalRevenuVal" layoutX="671.0" layoutY="32.0" prefHeight="29.0" prefWidth="75.0" style="-fx-font-size: 18;" styleClass="labelValeur" text="7777777" />
+      <FontAwesomeIconView glyphName="DOLLAR" layoutX="420.0" layoutY="52.0" size="16" wrappingWidth="9.857142925262451" />
+      <FontAwesomeIconView glyphName="DOLLAR" layoutX="748.0" layoutY="52.0" size="16" wrappingWidth="9.857142925262451" />
+      <Hyperlink fx:id="logout" layoutX="1322.0" layoutY="13.0" onAction="#Logout" prefHeight="36.0" prefWidth="34.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="30" wrappingWidth="23.85714292526245" />
+         </graphic>
+      </Hyperlink>
+      <ComboBox fx:id="typeData" layoutX="10.0" layoutY="122.0" prefHeight="29.0" prefWidth="129.0" promptText="Incredibles" />
+      <JFXTextField fx:id="RechercheID" layoutX="198.0" layoutY="116.0" prefHeight="36.0" prefWidth="155.0" promptText="Search by ID ..." />
+      <Pane fx:id="clientDescripPane" layoutX="753.0" layoutY="48.0" onMouseMoved="#initialize" onTouchMoved="#initialize" prefHeight="696.0" prefWidth="631.0">
+         <children>
+            <ScrollPane layoutX="34.0" layoutY="360.0" prefHeight="322.0" prefWidth="567.0">
+               <content>
+                  <TableView fx:id="histPay" prefHeight="320.0" prefWidth="563.0">
+                     <columns>
+                        <TableColumn fx:id="Date" prefWidth="88.0" text="Date" />
+                        <TableColumn fx:id="Bille" minWidth="63.0" prefWidth="126.0" text="Bill" />
+                        <TableColumn fx:id="montant" minWidth="0.0" prefWidth="189.0" text="amount" />
+                        <TableColumn fx:id="status" minWidth="0.0" prefWidth="127.0" text="Status" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <ImageView fitHeight="80.0" fitWidth="87.0" layoutX="27.0" layoutY="5.0" opacity="0.61" pickOnBounds="true" preserveRatio="true" styleClass="avatar">
+               <image>
+                  <Image url="@../../../../Desktop/imgs/13321621_1064583233608001_8160839511952431462_n.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="21.0" layoutY="88.0" style="-fx-font-size: 14;" styleClass="labelInfo" text="User ID : " />
+            <Label fx:id="userID" layoutX="79.0" layoutY="88.0" styleClass="labelValeur" text="XXXX" />
+            <Label layoutX="494.0" layoutY="32.0" prefHeight="25.0" prefWidth="51.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Score" />
+            <Label layoutX="113.0" layoutY="24.0" prefHeight="25.0" prefWidth="114.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Client Class" />
+            <Label layoutX="27.0" layoutY="132.0" prefHeight="25.0" prefWidth="155.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Default Payement" />
+            <Label layoutX="216.0" layoutY="132.0" prefHeight="25.0" prefWidth="58.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Total" />
+            <Label layoutX="413.0" layoutY="132.0" prefHeight="25.0" prefWidth="96.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Successive" />
+            <Label layoutX="27.0" layoutY="169.0" prefHeight="25.0" prefWidth="69.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Action :" />
+            <TextArea fx:id="action" editable="false" layoutX="46.0" layoutY="194.0" prefHeight="114.0" prefWidth="540.0" style="-fx-font-weight: bold; -fx-font-style:oblique;-fx-font-size:14;" />
+            <Label fx:id="totalDP" layoutX="274.0" layoutY="136.0" prefHeight="20.0" prefWidth="61.0" styleClass="labelValeur" text="XXXX" />
+            <Label fx:id="ScusDP" layoutX="509.0" layoutY="136.0" prefHeight="20.0" prefWidth="61.0" styleClass="labelValeur" text="XXXX" />
+            <Label fx:id="userClass" layoutX="224.0" layoutY="27.0" prefHeight="20.0" prefWidth="61.0" styleClass="labelValeur" text="XXXXXX" />
+            <Label fx:id="userScore" layoutX="554.0" layoutY="35.0" prefHeight="20.0" prefWidth="61.0" styleClass="labelValeur" text="XXXX" />
+            <Label layoutX="116.0" layoutY="51.0" prefHeight="25.0" prefWidth="213.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Prediction of credibility :" />
+            <Label fx:id="credibleValue" layoutX="327.0" layoutY="55.0" prefHeight="20.0" prefWidth="129.0" styleClass="labelValeur" text="XXXXXX" />
+            <Label layoutX="219.0" layoutY="323.0" prefHeight="25.0" prefWidth="155.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="Payement History" />
+            <FontAwesomeIconView fx:id="blocked" glyphName="LOCK" layoutX="296.0" layoutY="45.0" size="35" wrappingWidth="20.999996662139893" />
+         </children>
+      </Pane>
+      <Label layoutX="1253.0" layoutY="20.0" prefHeight="25.0" prefWidth="69.0" style="-fx-font-size: 20;" styleClass="labelInfo" text="LogOut" />
+      <Label layoutX="461.0" layoutY="66.0" prefHeight="29.0" prefWidth="213.0" style="-fx-font-size: 18;" styleClass="labelInfo" text="Maximum Expected income" />
+      <Label fx:id="maximalRevenuVal" layoutX="672.0" layoutY="69.0" prefHeight="29.0" prefWidth="75.0" style="-fx-font-size: 18;" styleClass="labelValeur" text="7777777" />
+      <FontAwesomeIconView glyphName="DOLLAR" layoutX="749.0" layoutY="89.0" size="16" wrappingWidth="9.857142925262451" />
+   </children>
+</AnchorPane>

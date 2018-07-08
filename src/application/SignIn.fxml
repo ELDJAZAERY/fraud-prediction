@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.DoubleValidator?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="606.0" prefWidth="522.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SigneInController">
+   <children>
+      <JFXTextField fx:id="fullname" labelFloat="true" layoutX="108.0" layoutY="76.0" prefHeight="33.0" prefWidth="259.0" promptText="Full Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="108.0" layoutY="370.0" prefHeight="38.0" prefWidth="286.0" promptText="Password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="128.0" layoutY="509.0" onAction="#signin" prefHeight="40.0" prefWidth="198.0" styleClass="login-button" text="Save" />
+      <JFXButton layoutX="354.0" layoutY="549.0" onAction="#exite" prefHeight="40.0" prefWidth="90.0" styleClass="login-button" text="Cancel" />
+      <FontAwesomeIconView glyphName="USER" layoutX="68.0" layoutY="110.0" size="30" />
+      <Label layoutX="16.0" layoutY="23.0" prefHeight="36.0" prefWidth="121.0" styleClass="logo" text="DiNaRaKoM" textAlignment="CENTER" textOverrun="CLIP">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <JFXPasswordField fx:id="password1" labelFloat="true" layoutX="108.0" layoutY="433.0" prefHeight="38.0" prefWidth="294.0" promptText="Confirm your Password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXPasswordField>
+      <FontAwesomeIconView glyphName="ADDRESS_CARD_ALT" layoutX="67.0" layoutY="344.0" size="30" wrappingWidth="32.571428298950195" />
+      <JFXTextField fx:id="account" labelFloat="true" layoutX="116.0" layoutY="311.0" prefHeight="33.0" prefWidth="176.0" promptText="Account Number">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="bin" labelFloat="true" layoutX="309.0" layoutY="311.0" prefHeight="38.0" prefWidth="100.0" promptText="BIN">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView glyphName="KEY" layoutX="72.0" layoutY="403.0" size="25" wrappingWidth="32.571428298950195" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="74.0" layoutY="466.0" size="25" wrappingWidth="32.571428298950195" />
+      <FontAwesomeIconView glyphName="CALENDAR" layoutX="66.0" layoutY="173.0" size="30" wrappingWidth="32.571428298950195" />
+      <FontAwesomeIconView glyphName="GRADUATION_CAP" layoutX="69.0" layoutY="284.0" size="30" wrappingWidth="32.571428298950195" />
+      <FontAwesomeIconView glyphName="VENUS_MARS" layoutX="67.0" layoutY="227.0" size="30" wrappingWidth="32.571428298950195" />
+      <FontAwesomeIconView glyphName="USERS" layoutX="239.0" layoutY="225.0" size="30" wrappingWidth="32.571428298950195" />
+      <JFXTextField fx:id="datePlace" labelFloat="true" layoutX="109.0" layoutY="139.0" prefHeight="33.0" prefWidth="259.0" promptText="Date and place of birth">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <ComboBox fx:id="famille" layoutX="288.0" layoutY="203.0" onMouseClicked="#initialze" prefHeight="25.0" prefWidth="136.0" promptText="family situation" />
+      <ComboBox fx:id="sex" layoutX="116.0" layoutY="204.0" onMouseClicked="#initialze" prefHeight="25.0" prefWidth="100.0" promptText="Gender" />
+      <ComboBox fx:id="education" layoutX="114.0" layoutY="261.0" onMouseClicked="#initialze" prefHeight="25.0" prefWidth="145.0" promptText="Education" />
+      <DoubleValidator />
+   </children>
+</AnchorPane>

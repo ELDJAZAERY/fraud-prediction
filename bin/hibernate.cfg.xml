@@ -1,0 +1,58 @@
+<!DOCTYPE hibernate-configuration SYSTEM
+     "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+     
+<hibernate-configuration>
+
+    <session-factory>
+	
+	
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/DCC?useSSL=false</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+
+
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+
+
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+
+		<!-- second Level Cache -->
+		<property name="cache.provaider_Class">ehcacheProvaider</property>
+		
+
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">false</property>
+
+
+
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		
+
+		<!-- Create the table of Entity Automatic -->
+		<property name="hbm2ddl.auto">update</property>
+
+		
+ 		<!-- Close automatic the session -->
+ 		<property name='transaction.auto_close_session'>true</property>
+ 		
+
+ 		
+ 		<!-- Mapping the Entity -->
+ 		<mapping class="data.Profile"/>
+ 		<mapping class="data.Payement"/>
+ 		
+ 		
+ 
+    </session-factory>
+
+</hibernate-configuration>
